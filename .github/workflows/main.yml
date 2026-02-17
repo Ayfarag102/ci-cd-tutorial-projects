@@ -23,6 +23,9 @@ jobs:
           python --version
           echo "Everything looks good!"
           exit 0
+
+      - name: Use my Secret
+        run: echo "The secret password is ${{secrets.MY_SUPER_SECRET_PASSWORD}}"
           
       
 

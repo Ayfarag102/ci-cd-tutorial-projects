@@ -14,4 +14,4 @@ jobs:
       - name: Simulate a Test
         run: |
           echo "Running unit tests..."
-          exit 0
+          exit 1

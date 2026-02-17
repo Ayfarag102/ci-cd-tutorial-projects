@@ -1,4 +1,4 @@
-name: FullCI-CD-Pipeline
+name: Full-CI-CD-Pipeline
 on: [push]
 
 permissions: # Give the robot permission to "write" the website live
@@ -7,14 +7,14 @@ permissions: # Give the robot permission to "write" the website live
     id-token: write
 
 jobs:
-  test-and-build: #  The "CI" part
+test-and-build: #  The "CI" part
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Run Tests
         run: echo "Tests Passed! Ready to deploy."
-
-    deploy-to-web: #  The "CD" part
+        
+deploy-to-web: #  The "CD" part
       needs: test-and-build # Only run this if thie test job SUCCEEDS
       runs-on: ubuntu-latest
       environment: 

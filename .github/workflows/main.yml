@@ -1,0 +1,17 @@
+name: CI-Test-Drive
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Say Hello to the Robot
+        run: echo "Hello, GitHub Actions is Running!"
+
+      - name: Simulate a Test
+        run: |
+          echo "Running unit tests..."
+          exit 0
